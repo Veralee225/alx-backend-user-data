@@ -21,6 +21,7 @@ elif os.getenv("AUTH_TYPE") == "auth":
     from api.v1.auth.auth import Auth
     auth = Auth()
 
+
 @app.before_request
 def before_request() -> str:
     """Before request handler"""
@@ -34,7 +35,7 @@ def before_request() -> str:
         if not auth.current_user(request):
             abort(403)
 
- 
+
 @app.errorhandler(404)
 def not_found(error) -> str:
     """ Not found handler
