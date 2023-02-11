@@ -5,6 +5,7 @@ Create a class that manages API authentication
 from flask import request
 from typing import List, TypeVar
 
+
 class Auth:
     """
     Auth class to interact with the authentication databse
